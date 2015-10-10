@@ -1,0 +1,19 @@
+{
+  "name": "CodeSampa",
+  "version": "1.0.0",
+  "homepage": "http://codesampa.com.br/",
+  "description": "Bootcamp System",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.5"
+  }
+}
+
