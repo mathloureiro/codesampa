@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'figaro'
+gem 'devise'
 
 group :development, :test do
   gem 'thin'
@@ -23,4 +24,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1'
   gem 'rspec-mocks'
   gem 'rspec-its'
+end
+
+group :test do
+	gem 'factory_girl_rails'
 end
