@@ -198,6 +198,7 @@ DEPENDENCIES
   pg
   quiet_assets
   rails (= 4.2.3)
+  responders
   rspec-its
   rspec-mocks
   rspec-rails (~> 3.1)
