@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap
 //= require pages
+//= require users
 //= require_tree .

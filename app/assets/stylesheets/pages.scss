@@ -390,6 +390,25 @@ ul {
     color: #F2F2F2;
 }
 
+
+.btn-transparent-blue{
+    background: transparent;
+    color: #2E6DA4;
+    border-style: solid;
+    border-color: #2E6DA4;
+    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+    margin-top:10px;
+}
+
+.btn-transparent:hover{
+    color: #2E6DA4;
+}
+
+
 .partners {
     opacity: 0.4;
     margin: 10px 15px;
