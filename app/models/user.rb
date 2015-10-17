@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
    def name_is_not_email
    	unless (self.name =~ /[@]/) == nil
-   		errors.add(:name, "some error")
+   		errors.add(:name, :name_is_not_email)
    	end
    end
 

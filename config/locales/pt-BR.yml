@@ -217,6 +217,13 @@ pt-BR:
         name: "Nome completo"
         remember_me: "Lembrar"
         password_confirmation: "Confirmação da senha"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              name_is_not_email: 'está preenchido com e-mail em vez de seu nome'
+
   helpers:
     page_entries_info:
       more_pages:
