@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
+   # Relations
+   has_many :courses
+   
    # Validations
    validates :name, presence: true
    validate :name_is_not_email
@@ -13,5 +16,6 @@ class User < ActiveRecord::Base
    		errors.add(:name, :name_is_not_email)
    	end
    end
+
 
 end
