@@ -25,8 +25,12 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1'
   gem 'rspec-mocks'
   gem 'rspec-its'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
 end
 
 group :test do
 	gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'shoulda-matchers', '~> 3.0'
 end
