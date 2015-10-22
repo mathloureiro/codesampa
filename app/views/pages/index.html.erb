@@ -29,6 +29,7 @@
               </button>
               <a class="navbar-brand page-scroll" href="/">
                 <div class="logo">Code Sampa <img src="/img/sampa-brand.png" class="logo-brand" /> </div>
+                <%= link_to 'sair',  destroy_user_session_path, method: :delete %>
               </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,7 +61,7 @@
           <div class="col-md-8 col-md-offset-2 centered">
             <h1>Criar uma startup, conseguir um emprego, ou reinventar sua carreira em 12 semanas.</h1>
             <div class="mtb">
-              <button class='btn btn-conf btn-green' type="submit">Sart your free trial</button>
+              <button class='btn btn-conf btn-green' type="submit">Ver turmas disponíveis</button>
             </div><!--/mt-->
           </div>
         </div><!--/row-->
@@ -132,7 +133,7 @@
                 <span class="sub">R$</span>
                 <span class="detail">Gratuito</span>
               </div><!--/price-->
-              <button class="btn btn-conf-2 btn-green">Inscreva-se</button>
+              <%= link_to 'Inscreva-se', 'http://goo.gl/forms/5vQ93znfE9', target: '_blank', class: 'btn btn-conf-2 btn-green' %>
             </div><!--/p-body-->
           </div><!--/price-table-->
         </div><!--/col-md-4-->
