@@ -1,218 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="/img/favicon.ico">
-  <title>CodeSampa</title>
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    </head>
-
-    <body>
-      <div id="h">
-        <nav class="navbar navbar-home navbar-fixed-top">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand page-scroll" href="/">
-                <div class="logo">Code Sampa <img src="/img/sampa-brand.png" class="logo-brand" /> </div>
-                <%# link_to 'sair',  destroy_user_session_path, method: :delete %>
-              </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="hidden">
-                  <a href="#page-top"></a>
-                </li>
-                  <%= link_to "<i class='fa fa-graduation-cap'></i> Acesso aluno".html_safe, new_user_session_path, class: 'btn btn-xs btn-transparent hidden-xs be-professor' %>
-                <% if current_user %>
-                <li class="dropdown">
-                 <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown">
-                  <%# image_tag current_user.image.url(:small), class: 'img-circle profile-image' %>
-                </a>
-                <ul class="dropdown-menu hidden-xs" role="menu">
-                </ul>
-              </li>
-              <% end %>
-            </ul>
-          </div>
-          <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-      </nav>
-
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 centered">
-            <h1>Criar uma startup, conseguir um emprego, ou reinventar sua carreira em 12 semanas.</h1>
-            <div class="mtb">
-              <a class='btn btn-conf btn-green' href='/#courses'>Ver turmas disponíveis</a>
-            </div><!--/mt-->
-          </div>
-        </div><!--/row-->
-      </div><!--/container-->
-    </div><!-- /H -->
-
-    <div class="container ptb">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>A nossa primeira regra é aprender na prática</h2>
-          <p class="">Aprenda uma poderesa estrutra que permite contruir aplicações web ricas a partir do zero. Se você nunca programou este curso irá apresentá-lo ao poder de programação rápidamente utilizando o framework Ruby on Rails.</p>
-        </div>
-        <div class="col-md-6">
-          <img src="/img/mac.png" class="img-responsive mt" alt="">
-        </div>
-      </div><!--/row-->
-    </div><!--/container-->
-
-    <div id="sep">
-      <div class="container">
-        <div class="row centered">
-          <div class="col-md-8 col-md-offset-2">
-            <h1>Empresas - Contrate um desenvolvedor pelo Code Sampa</h1>
-            <h4>Encontre profissionais que realizaram nossos cursos</h4>
-            <p><button class="btn btn-conf-2 btn-green">Em breve</button></p>
-          </div><!--/col-md-8-->
-        </div>
+<div id="h">
+  <nav class="navbar navbar-home navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="/">
+          <div class="logo">Code Sampa <img src="/img/sampa-brand.png" class="logo-brand" /> </div>
+          <%# link_to 'sair',  destroy_user_session_path, method: :delete %>
+        </a>
       </div>
-    </div><!--/sep-->
-
-    <div class="container ptb" id='courses'>
-      <div class="row centered">
-        <h2 class="mb">Próximas turmas</h2>
-
-        <div class="col-md-4">
-          <div class="price-table">
-            <div class="p-head">
-              São Paulo
-              <img src="/img/saopaulo.png" class="img-responsive"/>
-            </div>
-            <div class="p-body">
-              <ul class="features">
-                <li><b>Início</b> 2/Nov/15 - <b>Fim</b> 22/Dez/15</li>
-                <li>Duração do curso 72h <br/> 19h até 21:40h Seg, Qua,Qui</li>
-                <li>
-                  <b>Localização:</b> São Paulo, Rua Catalão, 72 - 5min do metrô Sumaré <br/>
-                  <a href="https://www.google.com.br/maps/place/R.+Catal%C3%A3o,+72+-+Sumar%C3%A9,+S%C3%A3o+Paulo+-+SP,+01255-020/@-23.5456918,-46.6835398,17z/data=!3m1!4b1!4m2!3m1!1s0x94ce5792b6163409:0x809dcaa7ad509a55?hl=en" target="_blank">Ver no mapa</a>
-                </li>
-                <li>
-                  Conteúdo do curso
-                  <div class="row ">
-                    <div class="col-sm-3 icons-course">
-                      <img src="/img/rails.png" class="img-responsive">
-                      Ruby on Rails
-                    </div>
-                    <div class="col-sm-3 icons-course">
-                      <img src="/img/htmlcss.png" class="img-responsive">
-                      HTML + CSS
-                    </div>
-                    <div class="col-sm-3 icons-course">
-                      <img src="/img/javascript.png" class="img-responsive">
-                      Javascript
-                    </div>
-                  </div>
-                  Você se irá ser um desenvolvedor web. Aprendendo as melhores práticas profissionais da industria, se conectando com outras pessoas acelerando suas habilidades de programação.
-                </li>
-              </ul>
-              <div class="price">
-                <span class="sub">R$</span>
-                <span class="detail">Gratuito</span>
-              </div><!--/price-->
-              <%= link_to 'Inscreva-se', 'http://goo.gl/forms/5vQ93znfE9', target: '_blank', class: 'btn btn-conf-2 btn-green' %>
-            </div><!--/p-body-->
-          </div><!--/price-table-->
-        </div><!--/col-md-4-->
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <%= link_to "<i class='fa fa-graduation-cap'></i> Acesso aluno".html_safe, new_user_session_path, class: 'btn btn-xs btn-transparent hidden-xs be-professor' %>
+          <% if current_user %>
+          <li class="dropdown">
+           <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown">
+            <%# image_tag current_user.image.url(:small), class: 'img-circle profile-image' %>
+          </a>
+          <ul class="dropdown-menu hidden-xs" role="menu">
+          </ul>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
 
 
-        <div class="col-md-4">
-          <div class="price-table">
-            <div class="p-head">
-              São Paulo
-              <img src="/img/saopaulo.png" class="img-responsive"/>
-            </div>
-            <div class="p-body">
-              <ul class="features">
-                <li><b>Início</b> Jan/16 - <b>Fim</b> Fev/16</li>
-                <li>Duração do curso 72h <br/> 19h até 21:40h Seg, Qua,Qui</li>
-                <li>
-                  <b>Localização:</b> São Paulo, Rua Catalão, 72 - 5min do metrô Sumaré <br/>
-                  <a href="https://www.google.com.br/maps/place/R.+Catal%C3%A3o,+72+-+Sumar%C3%A9,+S%C3%A3o+Paulo+-+SP,+01255-020/@-23.5456918,-46.6835398,17z/data=!3m1!4b1!4m2!3m1!1s0x94ce5792b6163409:0x809dcaa7ad509a55?hl=en" target="_blank">Ver no mapa</a>
-                </li>
-                <li>
-                  Conteúdo do curso
-                  <div class="row ">
-                    <div class="col-sm-3 icons-course">
-                      <img src="/img/rails.png" class="img-responsive">
-                      Ruby on Rails
-                    </div>
-                    <div class="col-sm-3 icons-course">
-                      <img src="/img/htmlcss.png" class="img-responsive">
-                      HTML + CSS
-                    </div>
-                    <div class="col-sm-3 icons-course">
-                      <img src="/img/javascript.png" class="img-responsive">
-                      Javascript
-                    </div>
-                  </div>
-                  Você se irá ser um desenvolvedor web. Aprendendo as melhores práticas profissionais da industria, se conectando com outras pessoas acelerando suas habilidades de programação.
-                </li>
-              </ul>
-              <div class="price">
-                <span class="sub">R$</span>
-                <span class="detail">-</span>
-              </div><!--/price-->
-            </div><!--/p-body-->
-          </div><!--/price-table-->
-        </div><!--/col-md-4-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 centered">
+      <h1>Criar uma startup, conseguir um emprego, ou reinventar sua carreira em 12 semanas.</h1>
+      <div class="mtb">
+        <a class='btn btn-conf btn-green' href='/#courses'>Ver turmas disponíveis</a>
+      </div><!--/mt-->
+    </div>
+  </div><!--/row-->
+</div><!--/container-->
+</div><!-- /H -->
+
+<div class="container ptb">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>A nossa primeira regra é aprender na prática</h2>
+      <p class="">Aprenda uma poderesa estrutra que permite contruir aplicações web ricas a partir do zero. Se você nunca programou este curso irá apresentá-lo ao poder de programação rápidamente utilizando o framework Ruby on Rails.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="/img/mac.png" class="img-responsive mt" alt="">
+    </div>
+  </div><!--/row-->
+</div><!--/container-->
+
+<div id="sep">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Empresas - Contrate um desenvolvedor pelo Code Sampa</h1>
+        <h4>Encontre profissionais que realizaram nossos cursos</h4>
+        <p><button class="btn btn-conf-2 btn-green">Em breve</button></p>
+      </div><!--/col-md-8-->
+    </div>
+  </div>
+</div><!--/sep-->
+
+<div class="container ptb" id='courses'>
+  <div class="row centered">
+    <h2 class="mb">Próximas turmas</h2>
+
+    <div class="col-md-4">
+      <div class="price-table">
+        <div class="p-head">
+          São Paulo
+          <img src="/img/saopaulo.png" class="img-responsive"/>
+        </div>
+        <div class="p-body">
+          <ul class="features">
+            <li><b>Início</b> 2/Nov/15 - <b>Fim</b> 22/Dez/15</li>
+            <li>Duração do curso 72h <br/> 19h até 21:40h Seg, Qua,Qui</li>
+            <li>
+              <b>Localização:</b> São Paulo, Rua Catalão, 72 - 5min do metrô Sumaré <br/>
+              <a href="https://www.google.com.br/maps/place/R.+Catal%C3%A3o,+72+-+Sumar%C3%A9,+S%C3%A3o+Paulo+-+SP,+01255-020/@-23.5456918,-46.6835398,17z/data=!3m1!4b1!4m2!3m1!1s0x94ce5792b6163409:0x809dcaa7ad509a55?hl=en" target="_blank">Ver no mapa</a>
+            </li>
+            <li>
+              Conteúdo do curso
+              <div class="row ">
+                <div class="col-sm-3 icons-course">
+                  <img src="/img/rails.png" class="img-responsive">
+                  Ruby on Rails
+                </div>
+                <div class="col-sm-3 icons-course">
+                  <img src="/img/htmlcss.png" class="img-responsive">
+                  HTML + CSS
+                </div>
+                <div class="col-sm-3 icons-course">
+                  <img src="/img/javascript.png" class="img-responsive">
+                  Javascript
+                </div>
+              </div>
+              Você se irá ser um desenvolvedor web. Aprendendo as melhores práticas profissionais da industria, se conectando com outras pessoas acelerando suas habilidades de programação.
+            </li>
+          </ul>
+          <div class="price">
+            <span class="sub">R$</span>
+            <span class="detail">Gratuito</span>
+          </div><!--/price-->
+          <%= link_to 'Inscreva-se', 'http://goo.gl/forms/5vQ93znfE9', target: '_blank', class: 'btn btn-conf-2 btn-green' %>
+        </div><!--/p-body-->
+      </div><!--/price-table-->
+    </div><!--/col-md-4-->
 
 
-      </div><!--/row-->
-    </div><!--/container-->
+    <div class="col-md-4">
+      <div class="price-table">
+        <div class="p-head">
+          São Paulo
+          <img src="/img/saopaulo.png" class="img-responsive"/>
+        </div>
+        <div class="p-body">
+          <ul class="features">
+            <li><b>Início</b> Jan/16 - <b>Fim</b> Fev/16</li>
+            <li>Duração do curso 72h <br/> 19h até 21:40h Seg, Qua,Qui</li>
+            <li>
+              <b>Localização:</b> São Paulo, Rua Catalão, 72 - 5min do metrô Sumaré <br/>
+              <a href="https://www.google.com.br/maps/place/R.+Catal%C3%A3o,+72+-+Sumar%C3%A9,+S%C3%A3o+Paulo+-+SP,+01255-020/@-23.5456918,-46.6835398,17z/data=!3m1!4b1!4m2!3m1!1s0x94ce5792b6163409:0x809dcaa7ad509a55?hl=en" target="_blank">Ver no mapa</a>
+            </li>
+            <li>
+              Conteúdo do curso
+              <div class="row ">
+                <div class="col-sm-3 icons-course">
+                  <img src="/img/rails.png" class="img-responsive">
+                  Ruby on Rails
+                </div>
+                <div class="col-sm-3 icons-course">
+                  <img src="/img/htmlcss.png" class="img-responsive">
+                  HTML + CSS
+                </div>
+                <div class="col-sm-3 icons-course">
+                  <img src="/img/javascript.png" class="img-responsive">
+                  Javascript
+                </div>
+              </div>
+              Você se irá ser um desenvolvedor web. Aprendendo as melhores práticas profissionais da industria, se conectando com outras pessoas acelerando suas habilidades de programação.
+            </li>
+          </ul>
+          <div class="price">
+            <span class="sub">R$</span>
+            <span class="detail">-</span>
+          </div><!--/price-->
+        </div><!--/p-body-->
+      </div><!--/price-table-->
+    </div><!--/col-md-4-->
 
-    <div id="g">
-      <div class="container">
-        <div class="row sponsor centered">
-          <h2 class="mb">Parceiros</h2>
-            <%= link_to  image_tag('/img/silvalopes.png', class: ''), 'http://silvalopes.adv.br/', target: '_blank' %>
-            <%= link_to  image_tag('/img/dito.png', class: ''), 'http://dito.cr/', target: '_blank' %>
-            <%= link_to  image_tag('http://culture-images.s3-sa-east-1.amazonaws.com/partners/1-DO_Logo_Vertical_Blue-75e0d68b.small.png', class: ''), 'https://www.digitalocean.com/?refcode=365573b9f27b', target: '_blank' %>
-        </div><!--/row-->
-      </div>
-    </div><!--/g-->
 
-    <div id="f">
-      <div class="container">
-        <div class="row centered">
-          <h2>Fale conosco</h2>
-          <h5>ola@codesampa.com.br</h5>
+  </div><!--/row-->
+</div><!--/container-->
 
-          <p class="mt">
-            <a href="#"><i class="ion-social-twitter"></i></a>
-            <a href="#"><i class="ion-social-dribbble"></i></a>
-            <a href="#"><i class="ion-social-instagram"></i></a>
-            <a href="#"><i class="ion-social-facebook"></i></a>
-            <a href="#"><i class="ion-social-pinterest"></i></a>
-            <a href="#"><i class="ion-social-tumblr"></i></a>
-          </p>
-          <h6 class="mt">CodeSampa <%= Time.now.year %></h6>
-        </div><!--/row-->
-      </div><!--/container-->
-    </div><!--/F-->
+<div id="g">
+  <div class="container">
+    <div class="row sponsor centered">
+      <h2 class="mb">Parceiros</h2>
+      <%= link_to  image_tag('/img/silvalopes.png', class: ''), 'http://silvalopes.adv.br/', target: '_blank' %>
+      <%= link_to  image_tag('/img/dito.png', class: ''), 'http://dito.cr/', target: '_blank' %>
+      <%= link_to  image_tag('http://culture-images.s3-sa-east-1.amazonaws.com/partners/1-DO_Logo_Vertical_Blue-75e0d68b.small.png', class: ''), 'https://www.digitalocean.com/?refcode=365573b9f27b', target: '_blank' %>
+    </div><!--/row-->
+  </div>
+</div><!--/g-->
 
-  </body>
-  </html>
+<div id="f">
+  <div class="container">
+    <div class="row centered">
+      <h2>Fale conosco</h2>
+      <h5>ola@codesampa.com.br</h5>
+
+      <p class="mt">
+        <a href="#"><i class="ion-social-twitter"></i></a>
+        <a href="#"><i class="ion-social-dribbble"></i></a>
+        <a href="#"><i class="ion-social-instagram"></i></a>
+        <a href="#"><i class="ion-social-facebook"></i></a>
+        <a href="#"><i class="ion-social-pinterest"></i></a>
+        <a href="#"><i class="ion-social-tumblr"></i></a>
+      </p>
+      <h6 class="mt">CodeSampa <%= Time.now.year %></h6>
+    </div><!--/row-->
+  </div><!--/container-->
+</div><!--/F-->
