@@ -61,7 +61,7 @@
           <div class="col-md-8 col-md-offset-2 centered">
             <h1>Criar uma startup, conseguir um emprego, ou reinventar sua carreira em 12 semanas.</h1>
             <div class="mtb">
-              <button class='btn btn-conf btn-green' type="submit">Ver turmas disponíveis</button>
+              <a class='btn btn-conf btn-green' href='/#courses'>Ver turmas disponíveis</a>
             </div><!--/mt-->
           </div>
         </div><!--/row-->
@@ -92,7 +92,7 @@
       </div>
     </div><!--/sep-->
 
-    <div class="container ptb">
+    <div class="container ptb" id='courses'>
       <div class="row centered">
         <h2 class="mb">Próximas turmas</h2>
 
@@ -188,7 +188,8 @@
       <div class="container">
         <div class="row sponsor centered">
           <h2 class="mb">Parceiros</h2>
-            <%= link_to  image_tag('http://culture-images.s3-sa-east-1.amazonaws.com/partners/6-ditocriativo-marca.small.png', class: ''), 'http://dito.cr/', target: '_blank' %>
+            <%= link_to  image_tag('/img/silvalopes.png', class: ''), 'http://silvalopes.adv.br/', target: '_blank' %>
+            <%= link_to  image_tag('/img/dito.png', class: ''), 'http://dito.cr/', target: '_blank' %>
             <%= link_to  image_tag('http://culture-images.s3-sa-east-1.amazonaws.com/partners/1-DO_Logo_Vertical_Blue-75e0d68b.small.png', class: ''), 'https://www.digitalocean.com/?refcode=365573b9f27b', target: '_blank' %>
         </div><!--/row-->
       </div>
