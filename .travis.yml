@@ -6,10 +6,16 @@ before_install:
 addons:
   postgresql: "9.3"
 
+language: node_js
+node_js:
+  - "0.10"
+
 before_script:
   - "cp config/database.sample.yml config/database.yml"
   - psql -c 'create database codesampa_test;' -U postgres
   - "bundle exec rake db:migrate"
+  - npm install -g bower
+  - bower install
 
 env:
   - DISPLAY=:99.0
