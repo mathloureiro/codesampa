@@ -17,3 +17,4 @@
 /bower_components
 /vendor
 /coverage
+/config/database.yml
