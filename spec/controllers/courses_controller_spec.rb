@@ -20,15 +20,10 @@ require 'rails_helper'
 
 RSpec.describe CoursesController, type: :controller do
 
-  # 
+  #  Create or build
   course = FactoryGirl.create(:course)
   courses = Course.all
   
-
-  let(:invalid_attributes) {
-    {name: nil}
-  }
-
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
