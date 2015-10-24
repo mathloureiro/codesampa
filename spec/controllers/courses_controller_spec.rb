@@ -25,7 +25,7 @@ RSpec.describe CoursesController, type: :controller do
   # adjust the attributes here as well.
   let(:valid_attributes)  {
     {
-      name: "Ryan"
+      name: "Curso de ruby"
     }
   }
 
