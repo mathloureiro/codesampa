@@ -6,7 +6,7 @@ before_install:
 
 before_script:
   - "cp config/database.sample.yml config/database.yml"
-  - "psql -c 'create role codesampa SUPERUSER LOGIN;' 123abc@"
+  - "psql -c 'create role codesampa SUPERUSER LOGIN;' postgres"
   - "psql -c 'create database codesampa_test;' -U codesampa 123abc@"
   - "bundle exec rake db:migrate"
 

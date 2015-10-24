@@ -13,5 +13,5 @@ test:
   host: localhost
   database: codesampa_test
   pool: 5
-  username: codesampa # <== Change me!
+  username: postgres # <== Change me!
   password: 123abc@ # <== Same here!
