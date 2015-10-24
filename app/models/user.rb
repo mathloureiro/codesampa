@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
    validates_length_of :password, in: 5..30
 
    def name_is_not_email
-   	unless (self.name =~ /[@]/) == nil
+   	if !((self.name =~ /[@]/) == nil)
    		errors.add(:name, :name_is_not_email)
    	end
    end
