@@ -1,22 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "courses/index", type: :view do
-  before(:each) do
-    assign(:courses, [
-      Course.create!(
-        :name => "Name",
-        :user => nil
-      ),
-      Course.create!(
-        :name => "Name",
-        :user => nil
-      )
-    ])
+  before do
+     10.times {FactoryGirl.create(:course)}
   end
 
   it "renders a list of courses" do
+    @courses = Course.all.take(10)
     render
-    assert_select "tr>td", :text => "Name".to_s, :count => 2
-    assert_select "tr>td", :text => nil.to_s, :count => 2
+    assert_select "tr>td", :count => 10
   end
 end
