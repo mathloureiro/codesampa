@@ -3,11 +3,12 @@ rvm:
 
 before_install:
   - "gem install bundler"
+addons:
+  postgresql: "9.3"
 
 before_script:
   - "cp config/database.sample.yml config/database.yml"
-  - "psql -c 'create role codesampa SUPERUSER LOGIN;' postgres"
-  - "psql -c 'create database codesampa_test;' -U codesampa 123abc@"
+  - psql -c 'create database codesampa_test;' -U postgres
   - "bundle exec rake db:migrate"
 
 env:
