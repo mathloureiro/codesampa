@@ -33,4 +33,5 @@ group :test do
 	gem 'factory_girl_rails'
   gem 'faker'
   gem 'shoulda-matchers', '~> 3.0'
+  gem 'simplecov', :require => false
 end
