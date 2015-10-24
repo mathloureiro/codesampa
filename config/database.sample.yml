@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: codesampa_development
+  pool: 5
+  username: <%= ENV['STUDY_USER'] %>
+  password: <%= ENV['STUDY_DATABASE_PASSWORD'] %>
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: codesampa_test
+  pool: 5
+  username: codesampa # <== Change me!
+  password: 123abc@ # <== Same here!
