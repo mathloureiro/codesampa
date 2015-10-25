@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   	resources :pages, only: [:index]
   	resources :courses, only: [:index, :show], path: 'cursos'
 
-  	get '/admin' => "admin/admin#index", as: :adm
+  	get '/admin' => "admin/admin#index", as: :admin
   	namespace :admin do
   	end
 end
