@@ -22,7 +22,7 @@ module Study
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    #config.i18n.default_locale = "pt-BR"
+    config.i18n.default_locale = 'pt-BR'
     
     # Geral assets config
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
