@@ -23,5 +23,9 @@ private
   		u.permit(:name,:email,:password,:password_confirmation)
   	end
   end
+
+  def after_sign_in_path_for(resource_or_scope)
+    session[:previous_url] || courses_path
+  end
   
 end
