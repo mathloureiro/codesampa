@@ -19,8 +19,4 @@ module ApplicationHelper
 		html.html_safe
 	end
   	# -- messages erros end
-
-  	def alerts
-  		render 'alerts/geral_alert'
-  	end
 end

@@ -17,6 +17,9 @@
 		</head>
 	<body>
 		<%= render 'navbars/application' %>
+		<div class="container">
+			<%= render 'alerts/geral_alert' %>
+		</div>
 		<%= yield %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<% if Rails.env.production? %>
