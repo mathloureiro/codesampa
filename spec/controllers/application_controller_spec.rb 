@@ -1,0 +1,16 @@
+require 'rails_helper'
+
+RSpec.describe ApplicationController, type: :controller do
+
+  before (:each) do
+    @user = FactoryGirl.create(:user)
+  end
+
+  describe 'after user login redirect to courses_path'
+    it 'redirect to /cursos'
+      sign_in @user
+      expect(response).to redirect_to(courses_path)
+    end
+  end
+
+end
