@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
    # Validations
    validates :name, presence: true
    validate :name_is_not_email
-   validates_length_of :password, in: 5..30
 
    def name_is_not_email
    	if !((self.name =~ /[@]/) == nil)

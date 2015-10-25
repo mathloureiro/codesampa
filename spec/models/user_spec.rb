@@ -13,9 +13,6 @@ RSpec.describe User, type: :model do
 		# User have password?
 		it { should validate_presence_of(:password) }
 
-		# User password lenght
-		it { should validate_length_of(:password).is_at_least(5) }
-
 		it 'Fill email in name' do
 			name_is_not_email = FactoryGirl.build(:user, name: 'email@of.user')
 			expect(name_is_not_email.valid?).to be_falsey
