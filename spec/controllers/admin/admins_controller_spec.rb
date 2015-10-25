@@ -14,10 +14,10 @@ describe Admin::AdminController do
     end
 
     it "Unless current_user admin redirect to root_path" do
-    	user = FactoryGirl.build(:user, admin: false)
+    	user = FactoryGirl.create(:user, admin: false)
     	sign_in user
     	get :index, {}
-     	expect(response.status).to eq(302)
+     	expect(response).to redirect_to(root_path)
     end
 
   end
