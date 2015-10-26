@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   	get '/admin' => "admin/admin#index", as: :admin
   	namespace :admin do
+  		resources :courses
   	end
 end

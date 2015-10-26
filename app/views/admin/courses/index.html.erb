@@ -1,0 +1,25 @@
+<table class='table'>
+  <thead>
+    <tr>
+    	<th>#</th>
+    	<th>Name</th>
+    	<th>User</th>
+    	<th></th>
+    	<th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+      	<td><%= course.id %></td>
+        <td><%= course.name %></td>
+        <td><%= course.user(:try).name %></td>
+        <td><%= course.created_at.try(:strftime, '%d/%m/%Y') %></td>
+        <td><%= link_to 'Show', admin_course_path(course)  %></td>
+        <td><%= link_to 'Edit', edit_admin_course_path(course) %></td>
+        <td><%= link_to 'Destroy', admin_course_path(course), method: :delete, data: { confirm: 'Tem certeza ?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
