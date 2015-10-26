@@ -3,11 +3,15 @@
 @import 'font-awesome/css/font-awesome';
 @import 'fontawesome-path';
 
+/* Gem Dependencies */
+@import 'rails_bootstrap_forms';
+
 /* Local scss */
 @import 'pages';
 @import 'navbar-home';
 @import 'users';
+@import 'admin';
 
-body {
-	padding-top: 60px;
+body > .container{
+  margin-top: 85px;
 }
