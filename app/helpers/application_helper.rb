@@ -19,4 +19,16 @@ module ApplicationHelper
 		html.html_safe
 	end
   	# -- messages erros end
+
+  	# Admins icons
+  	def container_brand(model)
+  		case model
+  		when 'user'
+  			"<i class='fa fa-users fa-lg'></i>".html_safe
+  		when 'course'
+  			"<i class='fa fa-graduation-cap fa-lg'></i>".html_safe
+  		end
+  	end
+  # End
+
 end
