@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
 gem 'figaro'
 gem 'devise'
 gem 'responders'
