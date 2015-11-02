@@ -1,0 +1,27 @@
+<table class='table'>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>User</th>
+      <th>Course</th>
+      <th>Ordem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concepts.each do |concept| %>
+      <tr>
+        <td><%= concept.id %></td>
+        <td><%= concept.name %></td>
+        <td><%= concept.user.try(:name) %></td>
+        <td><%= concept.course.try(:name) %></td>
+        <td><%= concept.fiat %></td>
+        <td><%= link_to 'Show', admin_concept_path(concept) %></td>
+        <td><%= link_to 'Edit', edit_admin_concept_path(concept) %></td>
+        <td><%= link_to 'Destroy', admin_concept_path(concept), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

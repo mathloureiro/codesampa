@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+
 	root 'pages#index'
-	
   devise_for :users
   
   resources :pages, only: [:index]
@@ -9,10 +9,15 @@ Rails.application.routes.draw do
     resources :concepts, only: [:show], path: 'conceitos'
   end
 
-  get '/admin' => "admin/admin#index", as: :admin
+  get '/artigos/:id' => 'contents#show', as: 'content'
+
+  get '/admin' => 'admin/admin#index', as: :admin
   namespace :admin do
     resources :courses
     resources :concepts
+    resources :contents
   end
+
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
 
 end

@@ -1,0 +1,46 @@
+<div class="row-slip-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-ex-3 col-md-3 col-sm-4 hidden-xs">
+        <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+          <div class="affixed">
+            <div class="course-back">
+              <h5><%= link_to "<i class='fa fa-caret-left'></i> #{@course.name}".html_safe, course_path(@course) %></h5>
+            </div>
+            <h1 class="concept-title"><%= @concept.name %></h1>
+          </div>
+          <div class="timeline-concept">
+            <div class="line2 text-timeline"></div>
+            <div class="all-videos">
+              <% @contents.each do |content| %>
+              <ul class="list-unstyled">
+                <li>
+                  <div class="circle"><%= content.icon.html_safe %></div>
+                  <div class="afix-link2">
+                    <a href="#<%= "#{content.id}" %>"><%= content.title %></a>
+                  </div>
+                </li>
+              </ul>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-ex-9 col-md-9 col-sm-8 col-xs-12">
+        <div class="contents">
+          <% @contents.each do |content| %>
+          <div id="<%= "#{content.id}" %>"></div>
+          <h2 class="content-title"><%= link_to content.title, content %></h2>
+          <% if content.youtube_url.present? %>
+          <iframe src="//www.youtube.com/embed/<%= content.youtube_url.partition("?v=").last.partition("&").first %>?bust=<%= Time.now %>" frameborder="0" style="overflow:hidden;width:100%" height="480"  class="player" width="800" allowfullscreen></iframe>
+          <% end %>
+          <div class="content-text">
+            <%= (content.content).html_safe %>
+            <hr />
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

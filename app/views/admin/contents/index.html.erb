@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>User</th>
+      <th>Concept</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contents.each do |content| %>
+      <tr>
+        <td><%= content.id %></td>
+        <td><%= content.title %></td>
+        <td><%= content.user.try(:name) %></td>
+        <td><%= content.concept.try(:name) %></td>
+        <td><%= link_to 'Show', admin_content_path(content) %></td>
+        <td><%= link_to 'Edit', edit_admin_content_path(content) %></td>
+        <td><%= link_to 'Destroy', admin_content_path(content), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

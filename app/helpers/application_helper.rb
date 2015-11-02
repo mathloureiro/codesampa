@@ -27,6 +27,10 @@ module ApplicationHelper
   			"<i class='fa fa-users fa-lg'></i>".html_safe
   		when 'course'
   			"<i class='fa fa-graduation-cap fa-lg'></i>".html_safe
+      when 'concept'
+        "<i class='fa fa-bookmark fa-lg'></i>".html_safe
+      when 'content'
+        "<i class='fa fa-file-text-o fa-lg'></i>".html_safe
   		end
   	end
   # End

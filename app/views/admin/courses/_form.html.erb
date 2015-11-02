@@ -1,4 +1,5 @@
 <%= bootstrap_form_for([:admin, @course]) do |f| %>
 	<%= f.text_field :name %>
+	<%= f.file_field :image %>
 	<%= f.submit class: 'btn btn-primary' %>
 <% end %>

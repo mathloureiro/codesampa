@@ -44,11 +44,6 @@ color: #666;
 margin-top: 10px; 
 }
 
-html,
-body {
-height: 100%;
-}
-
 .alignleft { float: left; }
 .alignright { float: right; }
 .aligncenter {
@@ -71,16 +66,6 @@ font-size: 0;
 height: 0;
 line-height: 0;
 width:100%;
-}
-::-moz-selection  {
-color: #fff;
-text-shadow:none;
-background:#2B2E31;
-}
-::selection {
-color: #fff;
-text-shadow:none;
-background:#2B2E31;
 }
 *,
 *:after,
@@ -343,6 +328,7 @@ padding-top: 60px;
 padding-bottom: 60px;
 background: #2f2f2f;
 color: white;
+margin-bottom: -50px;
 }
 
 #f h5 {

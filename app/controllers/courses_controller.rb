@@ -9,6 +9,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @concepts = Concept.joins(:course).where(course_id: @course).order('fiat ASC')
     respond_with(@course)
   end
 

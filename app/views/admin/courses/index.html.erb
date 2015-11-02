@@ -2,6 +2,7 @@
   <thead>
     <tr>
     	<th>#</th>
+      <th></th>
     	<th>Name</th>
     	<th>User</th>
     	<th></th>
@@ -13,6 +14,7 @@
     <% @courses.each do |course| %>
       <tr>
       	<td><%= course.id %></td>
+        <td><%= image_tag course.image.url(:tiny) %></td>
         <td><%= course.name %></td>
         <td><%= course.user(:try).name %></td>
         <td><%= course.created_at.try(:strftime, '%d/%m/%Y') %></td>

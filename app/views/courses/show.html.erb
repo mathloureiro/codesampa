@@ -1,13 +1,77 @@
-<p id="notice"><%= notice %></p>
+<div class="row-slip">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-sm-4 col-sm-4 hidden-xs">
+      <div class="course-back">
+        <h5><%= link_to "<i class='fa fa-caret-left'></i> Voltar para cursos".html_safe, courses_path %></h5>
+      </div>
+      <h1 class="course-title" data-step="1" data-intro="Bem-vindo! Aqui está o seu curso selecionado. Vamos te ensinar o que você pode fazer por aqui."><%= @course.name %></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
+      <div class="pullets"  data-step="5" data-intro="Os melhores arquivos são exibidos aqui.">
+        <div class="course-pull">
+          <div id="pulls-hide">
+            <div class="table-responsive">
 
-<p>
-  <strong>User:</strong>
-  <%= @course.user %>
-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<%= link_to 'Back', courses_path %>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+      <div class="hidden-lg hidden-md hidden-sm">
+        <div class="bg-concept">
+          <div class="university-back-mobile">
+            <h5><%# link_to "#{icon('caret-left')} #{@university.name}".html_safe, set_university_page_path(@university), remote: true, data: {toggle: 'modal', target: '#coursesModal'} %></h5>
+          </div>
+          <h1 class="course-title-mobile"><%= @course.name %></h1>
+        </div>
+      </div>
+
+      <% @concepts.each do |concept| %>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="concept-list" <%# "data-step='2' data-intro='Dividimos o curso em grupos dos conceitos importantes da matéria.'".html_safe if i == 1 %>>
+            <h2 class="concept-title"><%= link_to concept.name, course_concept_path(@course, concept) %></h2>
+            <div class="concept-description text-muted">
+              <p><%# concept.try(:description) %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="content-list" <%# "data-step='3' data-intro='Você pode assistir vídeos sobre conceitos e resoluções de exercícios, baixar arquivos e até ver as fontes das informações usadas.'".html_safe if i == 1 %>>
+
+
+            <div class="timeline-course">
+              <div class="line text-timeline"></div>
+              <% concept.contents.order('fiat ASC').each do |concept_content| %>
+              <article class="panel panel-default panel-outline">
+                <div class="panel-heading icon">
+                  <div class="icon-bg"></div>
+                  <%= concept_content.icon.html_safe %>
+                </div>
+                <div class="panel-body">
+                  <div class="afix-link3">
+                    <%= link_to concept_content.title, course_concept_path(@course, concept, anchor: concept_content.id ) %>
+                  </div>
+                </div>
+
+                <div class="separator"></div>
+              </article>
+              <% end %>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="break-line">
+        <hr>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+</div>
