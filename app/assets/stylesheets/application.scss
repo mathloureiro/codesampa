@@ -5,13 +5,116 @@
 
 /* Gem Dependencies */
 @import 'rails_bootstrap_forms';
+@import "bootsy";
 
 /* Local scss */
 @import 'pages';
 @import 'navbar-home';
 @import 'users';
 @import 'admin';
+@import 'courses';
+@import 'concepts';
+@import 'rainbows';
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  margin-bottom: 50px;
+}
 
 body > .container{
-  margin-top: 85px;
+  margin-top: 75px;
 }
+
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url('/fonts/proximanova-semibold-webfont.ttf');
+}
+
+@import url(http://fonts.googleapis.com/css?family=Hind:600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@media (min-width: 768px) {
+  .container {
+    width: 790px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-ex-3 {
+    width: 21%;
+  }
+  .col-ex-9 {
+    width: 79%;
+  }
+}
+
+h1{
+  font-weight: 700;
+}
+
+label.required:after {
+  content:" *";
+  color: #d9534f;
+}
+
+footer{
+  padding: 25px 0px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  font-family: "Proxima Nova Regular",sans-serif;
+  height: 45px;
+  padding-top: 30px;
+}
+
+.footer > .container p {
+  margin: 11px 0;
+  float: right;
+  font-size: 13px;
+}
+
+.footer a{
+  margin: 12px 5px ;
+  color: #005987;
+  float: left;
+  font-size: 13px;
+}
+
+.footer p{
+  margin: 0px 5px ;
+  color: #999;
+}
+
+.footer > .container {
+  border-top: 1px solid #DDD;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-default {
+    background-color: #ffF;
+    border-color: #E7E7E7;
+}
+

@@ -12,7 +12,25 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootsy
 //= require bootstrap/dist/js/bootstrap
 //= require pages
 //= require users
+//= require rainbows
 //= require_tree .
+
+$(window).load(function(){
+  dinamicLine();
+})
+
+var dinamicLine = function(){
+  var height = $('.all-videos').height();
+  $('.line2.text-timeline').css('height',height - 42);
+}
+
+$(document).ready(function() {
+    function showHiddenParagraphs() {
+        $("p.hidden").fadeIn(500);
+    }
+    setTimeout(showHiddenParagraphs, 1000);
+});
