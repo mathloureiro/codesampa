@@ -14,6 +14,8 @@ gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
 gem 'figaro'
 gem 'devise'
 gem 'responders'
+gem 'paperclip'
+gem 'bootsy'
 
 group :development, :test do
   gem 'thin'
