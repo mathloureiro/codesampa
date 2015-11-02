@@ -17,10 +17,13 @@
 		</head>
 	<body>
 		<%= render 'navbars/application' %>
-		<div class="container">
-			<%= render 'alerts/geral_alert' %>
-		</div>
 		<%= yield %>
+		<footer class="footer">
+			<div class="container">
+				<%= link_to "<i class='fa fa-github fa-lg'></i>".html_safe, 'https://github.com/breim/codesampa', target: '_blank' %>
+				<p>© <%= Time.now.year %> CodeSampa</p>
+			</div>
+		</footer>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<% if Rails.env.production? %>
 		<script>
