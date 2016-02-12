@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20151027061858) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "concepts", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
@@ -25,8 +22,8 @@ ActiveRecord::Schema.define(version: 20151027061858) do
     t.integer  "fiat",       default: 0
   end
 
-  add_index "concepts", ["course_id"], name: "index_concepts_on_course_id", using: :btree
-  add_index "concepts", ["user_id"], name: "index_concepts_on_user_id", using: :btree
+  add_index "concepts", ["course_id"], name: "index_concepts_on_course_id"
+  add_index "concepts", ["user_id"], name: "index_concepts_on_user_id"
 
   create_table "contents", force: :cascade do |t|
     t.string   "title"
@@ -40,8 +37,8 @@ ActiveRecord::Schema.define(version: 20151027061858) do
     t.string   "icon"
   end
 
-  add_index "contents", ["concept_id"], name: "index_contents_on_concept_id", using: :btree
-  add_index "contents", ["user_id"], name: "index_contents_on_user_id", using: :btree
+  add_index "contents", ["concept_id"], name: "index_contents_on_concept_id"
+  add_index "contents", ["user_id"], name: "index_contents_on_user_id"
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
@@ -54,7 +51,7 @@ ActiveRecord::Schema.define(version: 20151027061858) do
     t.datetime "image_updated_at"
   end
 
-  add_index "courses", ["user_id"], name: "index_courses_on_user_id", using: :btree
+  add_index "courses", ["user_id"], name: "index_courses_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -66,19 +63,12 @@ ActiveRecord::Schema.define(version: 20151027061858) do
     t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-  add_foreign_key "concepts", "courses"
-  add_foreign_key "concepts", "users"
-  add_foreign_key "contents", "concepts"
-  add_foreign_key "contents", "users"
-  add_foreign_key "courses", "users"
 end

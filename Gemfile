@@ -29,6 +29,7 @@ group :development, :test do
   gem 'rspec-its'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+  gem 'sqlite3'
 end
 
 group :test do
